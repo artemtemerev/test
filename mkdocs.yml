@@ -1,0 +1,46 @@
+site_name: BARTS Docs
+site_url: https://docs.company.com
+repo_name: company/docs
+repo_url: https://github.com/company/docs
+
+nav:
+  - Home: index.md
+  - Project A:
+    - Overview: project-a/index.md
+    - Getting Started: project-a/getting-started.md
+    - API Reference: project-a/api.md
+
+  - Project B:
+    - Overview: project-b/index.md
+    - Installation: project-b/installation.md
+    - Usage: project-b/usage.md
+
+  - Project C:
+    - Overview: project-c/index.md
+    - Guides: project-c/guides.md
+    - FAQ: project-c/faq.md
+
+theme:
+  name: material
+  logo: images/logo.png
+  favicon: images/favicon.ico
+
+plugins:
+  - search
+  #- monorepo  # lets you merge multiple repos
+  #- git-revision-date-localized
+  #- sitemap
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - codehilite
+  - footnotes
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/company
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/company

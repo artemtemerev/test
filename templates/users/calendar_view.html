@@ -1,0 +1,18 @@
+{% extends '_base.html' %}
+
+{% block content %}
+
+<p>Hello World</p>
+{% if events %}
+    {% for event in events.value %}
+        <li>{{ event.subject }} - {{ event.start.dateTime }}, {{ event.organizer.emailAddress.name }}</li>
+    {% endfor %}
+{% endif %}
+{% if users %}
+    {% for user in users.value %}
+        <li>{{ user.displayName }} - {{ user.jobTitle }}</li>
+    {% endfor %}
+{% endif %}
+{{ redirect_uri }}
+
+{% endblock content %}

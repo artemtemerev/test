@@ -1,0 +1,20 @@
+{% extends '_base.html' %}
+{% load socialaccount %}
+
+{% block title %} {% endblock title %}
+
+{% block content %}
+    <h1>Django Allauth Tutorial</h1>
+    {% if user.is_authenticated %}
+        <p>Welcome {{ user.username }} !!!</p>
+        <p>{{ user.extra_data }}</p>
+        <p>{{ user.first_name }}</p>
+        <p>{{ user.socialaccount_set.all.0.extra_data }}</p>
+        <p><a class="p-2 text-dark" href="{% url 'account_logout' %}">Log Out</a>
+    {% else %}
+        <p>You are not logged in</p>
+        <p><a class="p-2 text-dark" href="{% url 'account_login' %}">Log In</a></p>
+        <p><a class="btn btn-outline-primary" href="{% url 'account_signup' %}">Sign Up</a></p>
+        <p><a href="{% provider_login_url 'microsoft' %}">Sign Up With Office</a></p>
+    {% endif %}
+{% endblock content %}
