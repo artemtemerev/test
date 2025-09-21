@@ -4,7 +4,7 @@ repo_name: company/docs
 repo_url: https://github.com/company/docs
 
 nav:
-  - Home: index.md
+  - Home: my_module.md
   - Project A:
     - Overview: project-a/index.md
     - Getting Started: project-a/getting-started.md
@@ -30,12 +30,16 @@ plugins:
   #- monorepo  # lets you merge multiple repos
   #- git-revision-date-localized
   #- sitemap
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            docstring_style: numpy
 
 markdown_extensions:
   - toc:
       permalink: true
   - admonition
-  - codehilite
   - footnotes
 
 extra:

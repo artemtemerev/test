@@ -12,6 +12,9 @@ requests-oauthlib = "*"
 gunicorn = "==20.0.4"
 whitenoise = "==5.2.0"
 django-allauth = "==0.44.0"
+mkdocstrings = "*"
+mkdocs-material = "*"
+mkdocstrings-python = "*"
 
 [requires]
 python_version = "3.13.7"
