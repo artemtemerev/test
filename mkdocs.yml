@@ -3,11 +3,12 @@ site_url: https://docs.company.com
 repo_name: company/docs
 repo_url: https://github.com/company/docs
 
+docs_dir: docs
 nav:
-  - Home: my_module.md
+  - Home: index.md
   - Project A:
     - Overview: project-a/index.md
-    - Getting Started: project-a/getting-started.md
+    - Getting Started: my_module.md
     - API Reference: project-a/api.md
 
   - Project B:
@@ -41,6 +42,7 @@ markdown_extensions:
       permalink: true
   - admonition
   - footnotes
+  - pymdownx.snippets:
 
 extra:
   social:
